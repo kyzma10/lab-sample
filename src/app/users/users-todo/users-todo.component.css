@@ -1,3 +1,13 @@
 ul, li {
   list-style: none;
 }
+
+.done {
+  font-weight: 400;
+  color: green;
+}
+
+.not-done {
+  font-weight: 700;
+  color: crimson;
+}

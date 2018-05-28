@@ -1,6 +1,10 @@
 <h4>User {{id}}</h4>
 <ul *ngFor="let todo of todos">
   <li>
-    <span>have todo: {{ todo.id }}</span> - {{ todo.title }} is {{ todo.completed }}
+    <span>have todo: {{ todo.id }}</span> - {{ todo.title }} is:
+    <span class="done" *ngIf="todo.completed; else notCompleted">
+      done
+    </span>
+    <ng-template #notCompleted><span class="not-done">not done</span></ng-template>
   </li>
 </ul>
