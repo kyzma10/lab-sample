@@ -5,12 +5,22 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto nav nav-pills">
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="/posts" href="#">Posts</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="/admin" href="#">Admin</a>
+        <a class="nav-link" routerLink="/users" href="#">Users</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="admin" href="#">Admin</a>
+          <a class="nav-link" routerLink="admin/users" href="#">Users</a>
+          <a class="nav-link" routerLink="admin/edit-user" href="#">Edit user</a>
+          <a class="nav-link" routerLink="admin/posts" href="#">Posts</a>
+          <a class="nav-link" routerLink="admin/edit-post" href="#">Edit post</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/login" href="#">Log In/Out</a>
       </li>
     </ul>
   </div>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,13 @@ const routes: Routes = [
   {
     path: 'users',
     loadChildren: './users/users.module#UsersModule'
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule'
   },
   { path: '', redirectTo: 'posts', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }

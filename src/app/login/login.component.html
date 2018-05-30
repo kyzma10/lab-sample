@@ -1,0 +1,20 @@
+<div class="row justify-content-center">
+  <div class="col-md-4">
+    <button
+      type="button"
+      class="btn btn-primary btn-lg"
+      (click)="logIn()"
+      [attr.disabled]="this.auth.isLoged ? true : null">
+      Login
+    </button>
+  </div>
+  <div class="col-md-4">
+    <button
+      type="button"
+      class="btn btn-primary btn-lg"
+      (click)="logOut()"
+      [attr.disabled]="!this.auth.isLoged ? true : null">
+      Logout
+    </button>
+  </div>
+</div>
