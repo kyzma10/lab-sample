@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-post.component.css']
 })
 export class EditPostComponent implements OnInit {
-
+  model = {'title': 'smth'};
+  submitted = false;
   constructor() { }
 
   ngOnInit() {
   }
 
+  public onSubmit() {
+    this.submitted = true;
+    console.log(this.model);
+  }
 }

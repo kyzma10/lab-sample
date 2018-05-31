@@ -1,3 +1,24 @@
-<p>
-  edit-post works!
-</p>
+<form #formEdit="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="title" class="form-control" [(ngModel)]="model.title" >
+  </div>
+  <div class="form-group">
+    <label for="text">Text</label>
+    <textarea type="text" name="text" class="form-control" [(ngModel)]="model.text"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="user">User</label>
+    <select name="user" class="form-control" [(ngModel)]="model.user">
+      <option value="user1">User 1</option>
+      <option value="user2">User 2</option>
+      <option value="user3">User 3</option>
+      <option value="user4">User 4</option>
+      <option value="user5">User 5</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+  <div>
+    {{model | json}}
+  </div>
+</form>
