@@ -22,3 +22,8 @@
     {{model | json}}
   </div>
 </form>
+
+<form [formGroup]="fb">
+  <input type="text" formControlName="title">{{fb.get('title').value}}
+  <p>Form Value:{{fb.value | json}}</p>
+</form>
